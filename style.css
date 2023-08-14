@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+body {
+  background-color: hsla(217, 54%, 11%, 1);
+  display: grid;
+  place-items: center;
+  justify-items: center;
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  caret-color: transparent;
+}
+
+.card {
+  width: 21.8rem;
+  height: 36.2rem;
+  background-color: hsla(216, 51%, 16%, 1);
+  box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 
+  1.6rem 18.533rem 1.6rem 1.8666rem 0.8rem 3.4666rem 1.1333rem 1.2rem 1.0666rem 0.0666rem 1.0666rem 1.6rem 1.6rem;
+  grid-template-columns: 1.6rem 12.35333rem 6.246rem 1.666rem;
+  grid-template-areas:
+  ". . . ."
+  ". img img ."
+  ". . . ."
+  ". title title ."
+  ". . . ."
+  ". description description ."
+  ". . . ."
+  ". shape clock ."
+  ". . . ."
+  ". slash slash ."
+  ". . . ."
+  ". logo-created logo-created ."
+  ". . . ."
+  ;
+}
+
+.img-container {
+  border-radius: 8px;
+  width: 18.533rem;
+  height: 18.533rem;
+  grid-area: img;
+  position: relative;
+}
+
+.img-container:hover > * {
+  display: block;
+}
+
+.overlay {
+  border-radius: 8px;
+  display: none;
+  background-color: hsla(178, 100%, 50%, 1);
+  opacity: 0.503;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.eye {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hero {
+  border-radius: 8px;
+  width: 18.533rem;
+  height: 18.533rem;
+}
+
+.title {
+  color: hsla(0, 0%, 100%, 1);
+  font-size: 1.4667rem;
+  font-weight: 600;
+  font-feature-settings: 'clig' off, 'liga' off;
+  grid-area: title;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: hsla(215, 51%, 70%, 1);
+  font-weight: 300;
+  line-height: 144.444%;
+  font-feature-settings: 'clig' off, 'liga' off;
+  grid-area: description;
+}
+
+.shape {
+  width: 0.7333rem;
+  height: 1.2rem;
+  grid-area: shape;
+}
+
+.counter {
+  font-size: 1rem;
+  color: hsla(178, 100%, 50%, 1);
+  font-weight: 600;
+  grid-area: shape;
+  margin-left: 1.165333rem;
+}
+
+.clock {
+  width: 1.0666rem;
+  height: 1.0666rem;
+  grid-area: clock;
+  margin-top: 1.67px;
+}
+
+.countdown {
+  font-size: 1rem;
+  font-weight: 400;
+  color:hsla(215, 51%, 70%, 1);
+  font-feature-settings: 'clig' off, 'liga' off;
+  grid-area: clock;
+  margin-left: 1.579333rem;
+  
+}
+
+.slash {
+  background-color: hsla(216, 32%, 27%, 1);
+  width: 18.533rem;
+  height: 0.00666rem;
+  grid-area: slash;
+}
+
+.logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  grid-area: logo-created;
+}
+
+.created-by, span {
+  font-size: 1rem;
+  font-weight: 400;
+  font-feature-settings: 'clig' off, 'liga' off;
+  color: hsla(215, 51%, 70%, 1);
+  grid-area: logo-created;
+}
+
+.created-by {
+  margin: 7px 0 0 3.2666rem;
+}
+
+span {
+  color: #fff;
+}
+
+@media (min-width: 450px) {
+  .card {
+    width: 23.333rem;
+    height: 39.7rem;
+    grid-template-rows: 1.6rem 20.1333rem 1.6rem 1.8666rem 1.0666rem 3.4666rem 1.6rem 1.333rem 1.6rem 0.0666rem 1.0666rem 2.2rem 2.1333rem;
+    grid-template-columns: 1.6rem 13.554rem 6.5773rem 1.6rem;
+  }
+
+  .img-container, .hero {
+    width:20.1333rem;
+    height: 20.1333rem;
+  }
+
+  .counter {
+    font-size: 1.0666rem;
+  }
+
+  .title:hover, span:hover {
+    color:hsla(178, 100%, 50%, 1);
+    cursor: pointer;
+  }
+  .countdown {
+    font-size: 1.0666rem;
+  }
+
+  .slash {
+    width: 20.1333rem;
+  }
+
+  .created-by, span {
+    font-size: 1.0666rem;
+  }
+
+  .created-by {
+  margin: 6px 0 0 3.2666rem;
+}
+}
+
